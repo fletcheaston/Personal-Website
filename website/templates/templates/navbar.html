@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {{ super() }}
+
+    <nav class="navbar">
+        <div class="flex flex-row mx-auto py-5 px-5 max-w-4xl">
+            <a class="flex-initial" href="/">
+                <div class="rounded-xl px-3 py-1 navbar-button">
+                    Home
+                </div>
+            </a>
+
+            <div class="flex-grow"></div>
+
+            <a class="flex-initial" href="{{ url_for("about") }}">
+                <div class="rounded-xl px-3 py-1 navbar-button">
+                    About
+                </div>
+            </a>
+        </div>
+    </nav>
+{% endblock %}

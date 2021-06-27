@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+        <title>Fletcher Easton</title>
+    {% endblock %}
+
+    <link rel="icon" type="image/png" href="{{ url_for("static", path="images/favicon.jpg") }}"/>
+
+    <link href="{{ url_for("static", path="/css/buttons.css") }}" rel="stylesheet">
+    <link href="{{ url_for("static", path="/css/layout.css") }}" rel="stylesheet">
+    <link href="{{ url_for("static", path="/css/navbar.css") }}" rel="stylesheet">
+    <link href="{{ url_for("static", path="/css/text.css") }}" rel="stylesheet">
+    <link href="{{ url_for("static", path="/css/styles/neumorphism.css") }}" rel="stylesheet">
+
+    {#
+        Well.. linking to Tailwind via CDN isn't great,
+        it's kinda large (see https://tailwindcss.com/docs/installation#using-tailwind-via-cdn).
+        But it makes it pretty easy to work with.
+    #}
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<div class="flex flex-col h-screen base-background">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

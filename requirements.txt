@@ -1,0 +1,16 @@
+aiofiles==0.7.0
+black==21.5b2
+certifi==2021.5.30
+devtools==0.6.1
+django==3.2.4
+fastapi==0.65.2
+isort==5.8.0
+jinja2==3.0.1
+mypy==0.812
+pip-chill==1.0.1
+psycopg2==2.8.6
+pygments==2.9.0
+pyhumps==3.0.2
+pytest==6.2.4
+python-multipart==0.0.5
+uvicorn==0.14.0

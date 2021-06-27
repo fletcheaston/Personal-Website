@@ -1,0 +1,14 @@
+{% macro project_card(title, subtitle, image_url, alt_text) %}
+    <a class="flex flex-col rounded-xl text-center p-3 card-background card-shadow" href="#">
+        <h2 class="text-2xl mb-1">
+            {{ title }}
+        </h2>
+        <h3 class="text-xl mb-3">
+            {{ subtitle }}
+        </h3>
+
+        <div class="flex flex-grow">
+            {{ caller() }}
+        </div>
+    </a>
+{% endmacro %}

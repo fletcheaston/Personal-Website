@@ -1,0 +1,58 @@
+.base-background {
+    background-color: #efeeee;
+}
+
+.navbar {
+    background-color: #efeeee;
+    box-shadow: 3px 3px 6px #cbcbcb;
+    border-bottom: 1px solid #cbcbcb;
+}
+
+.navbar-button {
+    background-color: #efeeee;
+    box-shadow: 3px 3px 6px #cbcbcb, -3px -3px 6px #ffffff;
+    transition: box-shadow 0.1s;
+}
+
+.navbar-button:hover {
+    box-shadow: 2px 2px 4px #cbcbcb inset, -2px -2px 4px #ffffff inset;
+}
+
+.navbar-button:active {
+    box-shadow: 6px 6px 12px #cbcbcb inset, -6px -6px 12px #ffffff inset;
+}
+
+h1, h2 {
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+.title {
+    box-shadow: 6px 6px 12px #cbcbcb inset, -6px -6px 12px #ffffff inset;
+}
+
+.card-background {
+    background-color: #efeeee;
+}
+
+.card-background:hover {
+    background-color: #efeeee;
+}
+
+.card-shadow {
+    box-shadow: 6px 6px 12px #cbcbcb, -6px -6px 12px #ffffff;
+    transition: box-shadow 0.1s;
+}
+
+.card-shadow:hover {
+    box-shadow: 3px 3px 6px #cbcbcb inset, -6px -6px 12px #ffffff inset;
+}
+
+.card-shadow:active {
+    box-shadow: 12px 12px 24px #cbcbcb inset, -12px -12px 24px #ffffff inset;
+}
+
+.about-card {
+    background-color: #efeeee;
+    box-shadow: 6px 6px 12px #cbcbcb inset, -6px -6px 12px #ffffff inset;
+}
