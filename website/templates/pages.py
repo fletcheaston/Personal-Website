@@ -19,5 +19,5 @@ def about_template(*, server: Server) -> Any:
         "about.html",
         {
             "request": server.request,
-        }
+        },
     )

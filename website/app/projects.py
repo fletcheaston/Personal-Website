@@ -3,7 +3,7 @@ from typing import Any
 from fastapi import APIRouter, Depends
 from fastapi.responses import HTMLResponse
 
-from website.templates import home_template, about_template
+from website.templates import about_template, home_template
 from website.utils import Server
 
 router = APIRouter()

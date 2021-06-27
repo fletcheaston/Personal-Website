@@ -40,7 +40,6 @@ app.include_router(router)
 add_timing_middleware(app, record=logger.info, prefix="app", exclude="untimed")
 
 
-
 if __name__ == "__main__":
     import uvicorn
 

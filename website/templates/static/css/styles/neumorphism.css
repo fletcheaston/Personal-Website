@@ -22,6 +22,10 @@
     box-shadow: 6px 6px 12px #cbcbcb inset, -6px -6px 12px #ffffff inset;
 }
 
+p {
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+
 h1, h2 {
     font-family: 'Nunito Sans', sans-serif !important;
     font-weight: 600 !important;
@@ -55,4 +59,9 @@ h1, h2 {
 .about-card {
     background-color: #efeeee;
     box-shadow: 6px 6px 12px #cbcbcb inset, -6px -6px 12px #ffffff inset;
+}
+
+.email {
+    text-decoration: none;
+    color: #be0e0e;
 }
