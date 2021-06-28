@@ -13,31 +13,34 @@
     </a>
 {% endmacro %}
 
-{% macro work_experience(title, company, start_date, end_date, points) %}
+{% macro work_experience_card(work_experience) %}
     <div class="rounded-xl about-card p-3 mt-4">
         <h4 class="text-lg">
-            {{ title }}, {{ company }}
+            {{ work_experience.title }}, {{ work_experience.company }}
         </h4>
         <h5 class="text-md mb-3">
-            {{ start_date }} - {{ end_date }}
+            {{ work_experience.start_date }} - {{ work_experience.end_date }}
         </h5>
 
         <ul class="list-inside list-disc">
-            {% for point in points %}
+            {% for accomplishment in work_experience.accomplishments %}
                 <li class="mb-2">
-                    {{ point }}
+                    {{ accomplishment.description }}
                 </li>
             {% endfor %}
         </ul>
     </div>
 {% endmacro %}
 
-{% macro skill(description, technologies) %}
-    <ul class="list-outside list-disc mb-3">
+{% macro skill_card(skill) %}
+    <ul class="mb-4">
         <li>
-            {{ description }}
+            <h5 class="skill-category">
+                {{ skill.category }}
+            </h5>
+
             <ul class="list-inside list-disc">
-                {% for technology in technologies %}
+                {% for technology in skill.technologies %}
                     <li>
                         {{ technology }}
                     </li>
