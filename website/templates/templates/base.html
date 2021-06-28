@@ -24,6 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;800&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -32,6 +34,8 @@
 <div class="flex flex-col h-screen base-background">
     {% block content %}{% endblock %}
 </div>
+
+{% block javascript %}{% endblock %}
 
 </body>
 </html>

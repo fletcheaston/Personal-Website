@@ -31,6 +31,11 @@ h1, h2 {
     font-weight: 600 !important;
 }
 
+.resume-title {
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-weight: 600 !important;
+}
+
 .title {
     box-shadow: 6px 6px 12px #cbcbcb inset, -6px -6px 12px #ffffff inset;
 }

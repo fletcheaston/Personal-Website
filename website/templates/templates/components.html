@@ -1,6 +1,6 @@
-{% macro project_card(title, subtitle, image_url, alt_text) %}
+{% macro project_card(title, title_id, subtitle, image_url, alt_text) %}
     <a class="flex flex-col rounded-xl text-center p-3 card-background card-shadow" href="#">
-        <h2 class="text-2xl mb-1">
+        <h2 class="text-2xl mb-1" id="{{ title_id }}">
             {{ title }}
         </h2>
         <h3 class="text-xl mb-3">
@@ -11,4 +11,38 @@
             {{ caller() }}
         </div>
     </a>
+{% endmacro %}
+
+{% macro work_experience(title, company, start_date, end_date, points) %}
+    <div class="rounded-xl about-card p-3 mt-4">
+        <h4 class="text-lg">
+            {{ title }}, {{ company }}
+        </h4>
+        <h5 class="text-md mb-3">
+            {{ start_date }} - {{ end_date }}
+        </h5>
+
+        <ul class="list-inside list-disc">
+            {% for point in points %}
+                <li class="mb-2">
+                    {{ point }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endmacro %}
+
+{% macro skill(description, technologies) %}
+    <ul class="list-outside list-disc mb-3">
+        <li>
+            {{ description }}
+            <ul class="list-inside list-disc">
+                {% for technology in technologies %}
+                    <li>
+                        {{ technology }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
 {% endmacro %}
