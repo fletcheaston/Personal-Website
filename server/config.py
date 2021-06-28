@@ -1,6 +1,6 @@
 import os
 from functools import lru_cache
-from typing import Dict, Optional, Type
+from typing import Optional, Type
 
 from .fastapi_settings.base import Settings as BaseSettings
 from .fastapi_settings.local import Settings as LocalSettings
@@ -8,9 +8,10 @@ from .fastapi_settings.local import Settings as LocalSettings
 
 @lru_cache
 def get_settings() -> BaseSettings:
-    available_settings: Dict[Optional[str], Type[BaseSettings]] = {
+    available_settings: dict[Optional[str], Type[BaseSettings]] = {
         None: LocalSettings,
         "local": LocalSettings,
+        "fletcheaston-website": LocalSettings,
     }
 
     gcp_project = os.getenv("GOOGLE_CLOUD_PROJECT")

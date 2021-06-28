@@ -1,0 +1,13 @@
+runtime: python39
+env: standard
+entrypoint: gunicorn -w 1 -k uvicorn.workers.UvicornWorker main:app
+instance_class: F1
+handlers:
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
+automatic_scaling:
+  min_idle_instances: 1
+  min_instances: 1
+  max_instances: 2
