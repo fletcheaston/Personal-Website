@@ -8,6 +8,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi_restful.timing import add_timing_middleware
 
 from server import django_settings as server_settings
+from server.config import settings as fastapi_settings
 from server.urls import router
 
 try:
@@ -37,7 +38,10 @@ app.mount(
     name="static",
 )
 app.include_router(router)
-add_timing_middleware(app, record=logger.info, prefix="app", exclude="untimed")
+
+# GCP will automatically log request/response time, so only use this for local debugging.
+if fastapi_settings.DEBUG:
+    add_timing_middleware(app, record=logger.info, prefix="app", exclude="untimed")
 
 
 if __name__ == "__main__":
