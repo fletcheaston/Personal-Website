@@ -9,15 +9,17 @@
     {{ super() }}
 
     <main class="flex-1 overflow-y-auto">
-        <div class="flex flex-col max-w-4xl mx-auto px-5 text-center mb-4">
-            <div class="flex-1 grid gap-5 grid-cols-1 md:grid-cols-2 text-left mt-8">
+        <div class="flex flex-col max-w-6xl mx-auto px-5 text-center mb-4">
+            <div class="flex-1 grid gap-5 grid-cols-1 md:grid-cols-3 text-left mt-8">
 
-                <div class="flex rounded-xl p-5 about-card">
-                    <img alt="Illustration of Fletcher Easton." class="rounded-xl self-center"
-                         src="{{ url_for("static", path="/images/about/fletcher-anime.jpg") }}"/>
+                <div class="col-span-1">
+                    <div class="rounded-xl p-5 about-card">
+                        <img alt="Illustration of Fletcher Easton." class="rounded-xl self-center"
+                             src="{{ url_for("static", path="/images/about/fletcher-anime.jpg") }}"/>
+                    </div>
                 </div>
 
-                <div class="flex flex-col">
+                <div class="col-span-2 flex flex-col">
                     <div class="flex-initial rounded-xl p-5 about-card">
                         <h1 class="text-2xl">
                             I'm Fletcher Easton, a software engineer.
@@ -27,22 +29,23 @@
                     <div class="flex flex-col flex-grow rounded-xl mt-4 p-5 about-card">
                         <p class="flex-1 text-lg">
                             I recently graduated from Cal Poly in San Luis Obispo, CA, and I'm looking to move to the
-                            San
-                            Diego area.
+                            San Diego area.
                         </p>
 
-                        <br>
-
-                        <p class="flex-1 text-lg">
+                        <p class="flex-1 text-lg mt-2">
                             When I'm not at the computer, you can find me at the gym, hiking the nearest mountain,
                             playing Overwatch with friends, or reading Sci-Fi.
                         </p>
 
-                        <br>
-
-                        <p class="flex-1 text-lg">
+                        <p class="flex-1 text-lg mt-2">
                             If you want to get in touch, send me an email at
                             <a class="email" href="mailto:fletcheaston@gmail.com">fletcheaston@gmail.com</a>.
+                        </p>
+
+                        <p id="secret-text" class="flex-1 text-lg mt-2" hidden>
+                            <b>
+                                You're really looking at this in an iframe?
+                            </b>
                         </p>
                     </div>
                 </div>
@@ -54,8 +57,8 @@
                 </h2>
             </div>
 
-            <div class="flex-1 grid gap-5 grid-cols-1 md:grid-cols-5 mt-4">
-                <div class="col-span-3 rounded-xl text-left p-5 about-card">
+            <div class="flex-1 grid gap-5 grid-cols-1 md:grid-cols-3 mt-4">
+                <div class="col-span-2 rounded-xl text-left p-5 about-card">
                     <h3 class="text-xl resume-title">
                         Work Experience
                     </h3>
@@ -125,7 +128,7 @@
                             ) }}
                 </div>
 
-                <div class="col-span-2 rounded-xl text-left p-5 about-card">
+                <div class="col-span-1 rounded-xl text-left p-5 about-card">
                     <h3 class="text-xl resume-title">
                         Technical Expertise
                     </h3>
@@ -214,4 +217,13 @@
             </div>
         </div>
     </main>
+{% endblock %}
+
+{% block javascript %}
+    <script type="text/javascript">
+        // Only show the secret text when we're in an iframe.
+        if (window.location !== window.parent.location) {
+            $("#secret-text").show()
+        }
+    </script>
 {% endblock %}
