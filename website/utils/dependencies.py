@@ -19,8 +19,8 @@ from website.models.base import BaseModel
 
 class Style(str, Enum):
     # These should have the same names as the CSS files in the styles directory.
-    NEUMORPHIC = "neumorphism"
-    RETRO = "retro"
+    NEUMORPHISM = "neumorphism"
+    TERMINAL = "terminal"
     SAM = "sam"
 
 
@@ -33,7 +33,7 @@ class Server(BaseModel):
     @validator("style", pre=True, always=True)
     def parse_style(cls, v: str) -> Style:
         styles: dict[str, Style] = {style.lower(): style for style in Style}
-        return styles.get(v.lower(), Style.NEUMORPHIC)
+        return styles.get(v.lower(), Style.NEUMORPHISM)
 
 
 #######################################################################################################################
