@@ -1,14 +1,14 @@
-{% macro project_card(title, title_id, subtitle, image_url, alt_text) %}
+{% macro project_card(project) %}
     <a class="flex flex-col rounded-xl text-center p-3 card-background card-shadow" href="#">
-        <h2 class="text-2xl mb-1" id="{{ title_id }}">
-            {{ title }}
+        <h2 class="text-2xl mb-1" id="{{ project.uid }}">
+            {{ project.name }}
         </h2>
         <h3 class="text-xl mb-3">
-            {{ subtitle }}
+            {{ project.description }}
         </h3>
 
         <div class="flex flex-grow">
-            {{ caller() }}
+            {{ project.html_content|safe }}
         </div>
     </a>
 {% endmacro %}

@@ -1,15 +1,20 @@
 from typing import Any
 
-from website.models import Skill, WorkExperience
+from website.models import Project, Skill, WorkExperience
 from website.utils import Server
 
 from .base import templates
 
 
-def home_template(*, server: Server) -> Any:
+def home_template(
+    *,
+    projects: list[Project],
+    server: Server,
+) -> Any:
     return templates.TemplateResponse(
         "home.html",
         {
+            "projects": projects,
             "request": server.request,
         },
     )
