@@ -1,5 +1,5 @@
 import inspect
-from dataclasses import dataclass
+from enum import Enum
 from types import FunctionType
 from typing import Dict, Type
 
@@ -12,16 +12,28 @@ from fastapi import (  # noqa
     Response,
 )
 from humps import camelize
-from pydantic import ValidationError  # noqa
+from pydantic import ValidationError, dataclasses, validator  # noqa
 
 from website.models.base import BaseModel
 
 
-@dataclass()
-class Server:
+class Style(str, Enum):
+    # These should have the same names as the CSS files in the styles directory.
+    NEUMORPHIC = "neumorphism"
+    RETRO = "retro"
+    SAM = "sam"
+
+
+class Server(BaseModel):
     request: Request
     response: Response
     background: BackgroundTasks
+    style: str = ""
+
+    @validator("style", pre=True, always=True)
+    def parse_style(cls, v: str) -> Style:
+        styles: dict[str, Style] = {style.lower(): style for style in Style}
+        return styles.get(v.lower(), Style.NEUMORPHIC)
 
 
 #######################################################################################################################

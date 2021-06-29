@@ -15,6 +15,7 @@ def home_template(
         "home.html",
         {
             "projects": projects,
+            "style": server.style,
             "request": server.request,
         },
     )
@@ -31,6 +32,7 @@ def about_template(
         {
             "skills": skills,
             "work_experiences": work_experiences,
+            "style": server.style,
             "request": server.request,
         },
     )
