@@ -16,6 +16,9 @@ work_experiences: list[WorkExperience] = [
             Accomplishment(
                 description="Implemented devops with robust CI/CD and production-monitoring practices.",
             ),
+            Accomplishment(
+                description="Built our entire cloud architecture, including systems for production, internal testing, and A/B testing.",
+            ),
         ],
     ),
     WorkExperience(
@@ -92,6 +95,44 @@ work_experiences: list[WorkExperience] = [
             ),
             Accomplishment(
                 description="Completed requirements discovery with the customer.",
+            ),
+        ],
+    ),
+    WorkExperience(
+        title="Electrons Software Lead",
+        company="Cal Poly Racing - Baja",
+        start_date="August 2019",
+        end_date="June 2020",
+        accomplishments=[
+            Accomplishment(
+                description="Led the electronics team in building software for high-performance embedded systems/microcontrollers, "
+                "using various sensors to gather data about the Baja vehicle.",
+            ),
+            Accomplishment(
+                description="Conducted rigorous testing of sensors on the Baja vehicle in the field.",
+            ),
+            Accomplishment(
+                description="Assisted in the design, prototyping, and testing of custom PCBs.",
+            ),
+        ],
+    ),
+    WorkExperience(
+        title="Club President",
+        company="Precision Agriculture and Automation Club",
+        start_date="May 2018",
+        end_date="June 2020",
+        accomplishments=[
+            Accomplishment(
+                description="Led the robotics team in developing software and hardware solutions to various international competitions.",
+            ),
+            Accomplishment(
+                description="Built an autonomous watermelon harvesting robot that won $5,000 at the 2018 AgBot competition.",
+            ),
+            Accomplishment(
+                description="Built an autonomous apple harvesting robot that placed competitively at the 2019 ASABE competition.",
+            ),
+            Accomplishment(
+                description="Assisted faculty members with student recruitment efforts.",
             ),
         ],
     ),

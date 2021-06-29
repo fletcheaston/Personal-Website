@@ -8,7 +8,29 @@
 {% block content %}
     {{ super() }}
 
-    <main class="flex-1 overflow-y-auto text-center">
+    <main class="text-center pb-4">
+        <div class="mx-auto mt-8 non-secret-text" hidden>
+            <h1>
+                Work in Progress... Last updated June 29th, 2021.
+            </h1>
+
+            <h2>
+                <a href="https://github.com/fletcheaston/Personal-Website">
+                    <u>
+                        Github repository
+                    </u>
+                </a>
+            </h2>
+
+            <h2>
+                <a href="https://www.notion.so/joingrove/e5fc9c502bf3473792b0a4024a268014?v=b989c999ab1841db8419cc987d68b0e1">
+                    <u>
+                        Notion Progress Tracking
+                    </u>
+                </a>
+            </h2>
+        </div>
+
         <div class="grid gap-8 grid-cols-1 md:grid-cols-2 max-w-6xl mt-8 mx-auto px-5">
 
             {% call components.project_card(title="fletcheaston.com", title_id="website", subtitle="A look at this website.") %}
@@ -32,23 +54,27 @@
             {% endcall %}
 
             {% call components.project_card(title="Lygus Monitoring", title_id="lygus_monitoring", subtitle="Counting Lygus sucked up by the bug vacuum in strawberry fields.") %}
-                <img alt="Screenshot of assembledsupply.com." class="rounded-xl self-end" src="{{ url_for("static", path="/images/strawberry-center/home.jpg") }}"/>
+                <img alt="Screenshot of the California Strawberry Commission logo." class="rounded-xl self-end" src="{{ url_for("static", path="/images/strawberry-center/home.jpg") }}"/>
             {% endcall %}
 
-            {% call components.project_card(title="SmartFarm", title_id="smartfarm", subtitle="Open-source Arduino-based platform for crop monitoring.") %}
-                <img alt="" class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
-            {% endcall %}
-
-            {% call components.project_card(title="Yellow Star-Thistle Killer", title_id="star_thistle", subtitle="Automated machine for hunting and killing yellow star-thistle.") %}
-                <img alt="" class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
+            {% call components.project_card(title="Baja SAE DAQ", title_id="baja", subtitle="High-performance, fault tolerant data acquisition for the Baja SAE car.") %}
+                <img alt="Picture of the Cal Poly Racing Baja SAE car." class="rounded-xl self-end" src="{{ url_for("static", path="/images/baja/home.jpg") }}"/>
             {% endcall %}
 
             {% call components.project_card(title="Simulated Apple Harvester", title_id="apple", subtitle="Building a robot to autonomously harvest apples.") %}
-                <img alt="" class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
+                <img alt="The Cal Poly BRAE logo." class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
             {% endcall %}
 
             {% call components.project_card(title="Watermelon Harvester", title_id="watermelon", subtitle="Building a robot to autonomously harvest watermelons.") %}
-                <img alt="" class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
+                <img alt="The Cal Poly BRAE logo." class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
+            {% endcall %}
+
+            {% call components.project_card(title="SmartFarm", title_id="smartfarm", subtitle="Open-source Arduino-based platform for crop monitoring.") %}
+                <img alt="The Cal Poly BRAE logo." class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
+            {% endcall %}
+
+            {% call components.project_card(title="Yellow Star-Thistle Killer", title_id="star_thistle", subtitle="Automated machine for hunting and killing yellow star-thistle.") %}
+                <img alt="The Cal Poly BRAE logo." class="rounded-xl self-end" src="{{ url_for("static", path="/images/brae/home.jpg") }}"/>
             {% endcall %}
 
         </div>
@@ -66,6 +92,16 @@
         // Only show the website project when we're not in an iframe.
         if (window.location !== window.parent.location) {
             $("#website").parent().hide()
+        }
+    </script>
+
+    <script type="text/javascript">
+        // Only show the non-secret text when we're not in an iframe.
+        if (window.location !== window.parent.location) {
+            $(".non-secret-text").hide()
+        }
+        else {
+            $(".non-secret-text").show()
         }
     </script>
 {% endblock %}

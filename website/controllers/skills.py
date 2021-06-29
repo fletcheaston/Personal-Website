@@ -6,7 +6,7 @@ skills: list[Skill] = [
         technologies=[
             "Django",
             "FastAPI",
-            "OepnAPI/Swagger",
+            "OpenAPI/Swagger",
             "REST",
         ],
     ),
