@@ -1,5 +1,5 @@
 {% macro project_card(project) %}
-    <a class="flex flex-col text-center p-3 home-card" href="#">
+    <a class="flex flex-col text-center p-3 home-card" href="{{ project.url }}">
         <h2 class="home-card-title mb-1" id="{{ project.uid }}">
             {{ project.name }}
         </h2>

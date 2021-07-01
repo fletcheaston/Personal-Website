@@ -36,3 +36,16 @@ def about_template(
             "request": server.request,
         },
     )
+
+
+def website_template(
+    *,
+    server: Server,
+) -> Any:
+    return templates.TemplateResponse(
+        "projects/website.html",
+        {
+            "style": server.style,
+            "request": server.request,
+        }
+    )
