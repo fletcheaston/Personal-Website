@@ -28,12 +28,6 @@ class Server(BaseModel):
     request: Request
     response: Response
     background: BackgroundTasks
-    style: str = ""
-
-    @validator("style", pre=True, always=True)
-    def parse_style(cls, v: str) -> Style:
-        styles: dict[str, Style] = {style.lower(): style for style in Style}
-        return styles.get(v.lower(), Style.NEUMORPHISM)
 
 
 #######################################################################################################################
