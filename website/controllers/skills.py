@@ -24,6 +24,8 @@ skills: list[Skill] = [
             "JS",
             "CSS",
             "HTML5",
+            "Bootstrap",
+            "TailwindCSS",
             "Jinja2 templating",
             "Django templating",
         ],
@@ -64,7 +66,7 @@ skills: list[Skill] = [
     Skill(
         category="Robotics",
         technologies=[
-            "Arduino",
+            "Microcontrollers",
             "Raspberry Pi",
             "GPS/RTK/PPK",
             "Sensor fusion systems",

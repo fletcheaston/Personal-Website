@@ -91,3 +91,7 @@ h1, h2 {
     text-decoration: none;
     color: #be0e0e;
 }
+
+.email:hover {
+    text-decoration: underline;
+}

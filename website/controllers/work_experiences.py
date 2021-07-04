@@ -8,16 +8,16 @@ work_experiences: list[WorkExperience] = [
         end_date="Present",
         accomplishments=[
             Accomplishment(
-                description="Coordinated an API-first development process with our customers, designers, and front-end engineers.",
+                description="Coordinated an API-first development process with customers, designers, and front-end engineers.",
             ),
             Accomplishment(
-                description="Developed and documented our REST APIs using Django and FastAPI.",
+                description="Developed, documented, and tested REST APIs using FastAPI, Django, and pytest.",
             ),
             Accomplishment(
-                description="Implemented devops with robust CI/CD and production-monitoring practices.",
+                description="Implemented robust CI/CD, unit/integration testing, A/B testing, and production-monitoring practices",
             ),
             Accomplishment(
-                description="Built our entire cloud architecture, including systems for production, internal testing, and A/B testing.",
+                description="Assisted with front-end testing and debugging using React and TypeScript.",
             ),
         ],
     ),
@@ -28,13 +28,19 @@ work_experiences: list[WorkExperience] = [
         end_date="Present",
         accomplishments=[
             Accomplishment(
-                description="Developed machine vision systems to identify and count Lygus bugs.",
+                description="Developed edge and cloud-based machine-vision systems to identify and count Lygus, mites, and strawberry "
+                "runners using TensorFlow and FastAPI.",
             ),
             Accomplishment(
-                description="Assisted in automating the runner-cutting process for strawberries.",
+                description="Built robust pipelines in AWS for updating the machine-vision models powering the cloud-based object "
+                "detection.",
             ),
             Accomplishment(
-                description="Built robust machine vision pipelines in AWS for detecting Lygus bugs and strawberry runners.",
+                description="Onboarded new software engineers onto our cloud-based infrastructure.",
+            ),
+            Accomplishment(
+                description="Worked with mechanical engineers and California strawberry growers to develop edge-computing hardware ("
+                "cameras, sensors, embedded computers) for fields.",
             ),
         ],
     ),
@@ -54,6 +60,9 @@ work_experiences: list[WorkExperience] = [
                 description="Implemented devops with robust CI/CD and production-monitoring practices.",
             ),
             Accomplishment(
+                description="Assisted with testing and debugging using Angular and TypeScript.",
+            ),
+            Accomplishment(
                 description="Assisted in requirements discovery with customers.",
             ),
         ],
@@ -65,7 +74,7 @@ work_experiences: list[WorkExperience] = [
         end_date="June 2021",
         accomplishments=[
             Accomplishment(
-                description="Scraped and cleaned data from various industrial supplies websites.",
+                description="Scraped and cleaned data from various industrial supplies websites using selenium and scrapy.",
             ),
             Accomplishment(
                 description="Built a data management system for matching items from dozens of sellers for direct price comparisons.",
@@ -76,6 +85,9 @@ work_experiences: list[WorkExperience] = [
             Accomplishment(
                 description="Documented code and practices for other engineers and the (non-technical) CEO to follow.",
             ),
+            Accomplishment(
+                description="Assisted with front-end testing and debugging using React and TypeScript.",
+            ),
         ],
     ),
     WorkExperience(
@@ -85,16 +97,15 @@ work_experiences: list[WorkExperience] = [
         end_date="January 2021",
         accomplishments=[
             Accomplishment(
-                description="Built a high-performant system to efficiently arrange variably sized pallets in box trucks.",
+                description="Built a highly performant API to efficiently arrange variably sized pallets in box trucks using FastAPI and "
+                "NumPy/SciPy.",
             ),
             Accomplishment(
-                description="Developed a responsive web app for common freight conversions and calculations.",
+                description="Developed a responsive web app and cloud architecture to support precise freight conversions and "
+                "calculations.",
             ),
             Accomplishment(
                 description="Worked with a UI/UX contractor to design and build the web app.",
-            ),
-            Accomplishment(
-                description="Completed requirements discovery with the customer.",
             ),
         ],
     ),
