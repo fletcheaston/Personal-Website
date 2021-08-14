@@ -25,7 +25,7 @@ work_experiences: list[WorkExperience] = [
         title="Automation Engineer",
         company="California Strawberry Commission",
         start_date="October 2019",
-        end_date="June 2021",
+        end_date="July 2021",
         accomplishments=[
             Accomplishment(
                 description="Developed edge and cloud-based machine-vision systems to identify and count Lygus, mites, and strawberry "
